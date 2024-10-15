@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyaari - Empowering Women's Health and Growth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FF69B4;
+        }
+        .logo svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            background: linear-gradient(to right, #FFF0F5, #E6E6FA);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #FF69B4;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #FF69B4;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #FF1493;
+        }
+        .key-areas {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+        .key-areas h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #FF69B4;
+            margin-bottom: 2rem;
+        }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .area-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #FFF0F5;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .area-item:hover {
+            transform: translateY(-5px);
+        }
+        .area-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .coming-soon {
+            background-color: #FFF0F5;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .coming-soon h2 {
+            font-size: 2rem;
+            color: #FF69B4;
+            margin-bottom: 1rem;
+        }
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .email-form input[type="email"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #FFD1DC;
+            border-radius: 5px;
+        }
+        .email-form button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .email-form button:hover {
+            background-color: #FF1493;
+        }
+        footer {
+            background-color: #FFD1DC;
+            color: #333;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" />
+                </svg>
+                Nyaari
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Empower Your Journey with Nyaari</h1>
+            <p>Your one-stop solution for managing health, fostering personal growth, and building supportive communities. Join us in creating a better you!</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="key-areas" id="features">
+        <div class="container">
+            <h2>Our Key Areas</h2>
+            <div class="areas-grid">
+                <div class="area-item">
+                    <div class="area-icon">💗</div>
+                    <h3>Health</h3>
+                    <p>Comprehensive health management tools and resources.</p>
+                </div>
+                <div class="area-item">
+                    <div class="area-icon">🌱</div>
+                    <h3>Personal Development</h3>
+                    <p>Courses and tools to help you grow and achieve your goals.</p>
+                </div>
+                <div class="area-item">
+                    <div class="area-icon">👥</div>
+                    <h3>Community</h3>
+                    <p>Connect with like-minded women and build lasting relationships.</p>
+                </div>
+                <div class="area-item">
+                    <div class="area-icon">🏋️‍♀️</div>
+                    <h3>Fitness</h3>
+                    <p>Personalized fitness plans and tracking for your wellness journey.</p>
+                </div>
+                <div class="area-item">
+                    <div class="area-icon">🛍️</div>
+                    <h3>Products</h3>
+                    <p>Curated selection of health and wellness products just for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="coming-soon" id="contact">
+        <div class="container">
+            <h2>Coming Soon</h2>
+            <p>We're working hard to bring you the best experience. Sign up to stay updated!</p>
+            <form class="email-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Stay Updated</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nyaari. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
