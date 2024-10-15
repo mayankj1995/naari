@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyaari - Empowering Women's Health and Growth</title>
+    <title>Nyaari - Empowering Indian Women's Health and Growth</title>
     <style>
         * {
             margin: 0;
@@ -14,227 +14,387 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            background: linear-gradient(to bottom, #fff5f7, #ffffff);
         }
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
         header {
-            background-color: #fff;
+            background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1rem 0;
         }
-        .header-content {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
         .logo {
             display: flex;
             align-items: center;
-            font-size: 1.5rem;
+            color: #ec4899;
             font-weight: bold;
-            color: #FF69B4;
+            font-size: 1.5rem;
         }
         .logo svg {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
         }
         nav ul {
             display: flex;
-            list-style: none;
+            list-style-type: none;
         }
         nav ul li {
-            margin-left: 20px;
+            margin-left: 1.5rem;
         }
         nav ul li a {
-            text-decoration: none;
             color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ec4899;
         }
         .hero {
-            background: linear-gradient(to right, #FFF0F5, #E6E6FA);
-            padding: 4rem 0;
             text-align: center;
+            padding: 5rem 0;
         }
         .hero h1 {
-            font-size: 2.5rem;
-            color: #FF69B4;
+            font-size: 3rem;
+            color: #ec4899;
             margin-bottom: 1rem;
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             max-width: 600px;
             margin: 0 auto 2rem;
         }
-        .cta-button {
+        .btn {
             display: inline-block;
-            background-color: #FF69B4;
-            color: white;
-            padding: 0.8rem 1.5rem;
+            background-color: #ec4899;
+            color: #ffffff;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
             text-decoration: none;
-            border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
         }
-        .cta-button:hover {
-            background-color: #FF1493;
+        .btn:hover {
+            background-color: #d61f69;
         }
-        .key-areas {
-            padding: 4rem 0;
-            background-color: #fff;
+        .features {
+            background-color: #ffffff;
+            padding: 5rem 0;
         }
-        .key-areas h2 {
+        .features h2 {
             text-align: center;
             font-size: 2rem;
-            color: #FF69B4;
-            margin-bottom: 2rem;
+            color: #ec4899;
+            margin-bottom: 3rem;
         }
-        .areas-grid {
+        .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
         }
-        .area-item {
-            text-align: center;
+        .feature-item {
+            background-color: #fff5f7;
             padding: 1.5rem;
-            background-color: #FFF0F5;
-            border-radius: 10px;
-            transition: transform 0.3s;
+            border-radius: 0.5rem;
+            text-align: center;
+            transition: box-shadow 0.3s;
         }
-        .area-item:hover {
-            transform: translateY(-5px);
+        .feature-item:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .area-icon {
-            font-size: 3rem;
+        .feature-item svg {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1rem;
+            color: #ec4899;
+        }
+        .feature-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .about, .how-it-works, .team, .faq {
+            padding: 5rem 0;
+        }
+        .about h2, .how-it-works h2, .team h2, .faq h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #ec4899;
+            margin-bottom: 2rem;
+        }
+        .about p, .team p {
+            text-align: center;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .testimonials {
+            background-color: #fff5f7;
+            padding: 5rem 0;
+        }
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #ec4899;
+            margin-bottom: 3rem;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial-item {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .testimonial-item p:first-child {
+            font-style: italic;
             margin-bottom: 1rem;
         }
-        .coming-soon {
-            background-color: #FFF0F5;
-            padding: 4rem 0;
+        .testimonial-item p:last-child {
+            font-weight: bold;
+            color: #ec4899;
+        }
+        .how-it-works ol {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+        }
+        .how-it-works li {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .faq-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .faq-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .subscribe {
+            background-color: #ec4899;
+            color: #ffffff;
+            padding: 5rem 0;
             text-align: center;
         }
-        .coming-soon h2 {
+        .subscribe h2 {
             font-size: 2rem;
-            color: #FF69B4;
             margin-bottom: 1rem;
         }
-        .email-form {
+        .subscribe p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .subscribe form {
+            display: flex;
+            justify-content: center;
             max-width: 500px;
             margin: 0 auto;
         }
-        .email-form input[type="email"] {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #FFD1DC;
-            border-radius: 5px;
-        }
-        .email-form button {
-            background-color: #FF69B4;
-            color: white;
+        .subscribe input[type="email"] {
+            flex-grow: 1;
+            padding: 0.75rem;
             border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
+            border-radius: 9999px 0 0 9999px;
+            font-size: 1rem;
+        }
+        .subscribe button {
+            background-color: #d61f69;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 9999px 9999px 0;
+            font-size: 1rem;
             font-weight: bold;
+            cursor: pointer;
             transition: background-color 0.3s;
         }
-        .email-form button:hover {
-            background-color: #FF1493;
+        .subscribe button:hover {
+            background-color: #bf125d;
         }
         footer {
-            background-color: #FFD1DC;
-            color: #333;
+            background-color: #333333;
+            color: #ffffff;
             text-align: center;
             padding: 2rem 0;
         }
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-            }
             nav ul {
-                margin-top: 1rem;
+                display: none;
             }
-            nav ul li {
-                margin: 0 10px;
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .feature-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container header-content">
+        <nav class="container">
             <div class="logo">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" />
                 </svg>
                 Nyaari
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Empower Your Journey with Nyaari</h1>
-            <p>Your one-stop solution for managing health, fostering personal growth, and building supportive communities. Join us in creating a better you!</p>
-            <a href="#" class="cta-button">Get Started</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Empower Your Journey with Nyaari</h1>
+                <p>Your one-stop solution for managing health, fostering personal growth, and building supportive communities for Indian women.</p>
+                <a href="#features" class="btn">Explore Features</a>
+            </div>
+        </section>
 
-    <section class="key-areas" id="features">
-        <div class="container">
-            <h2>Our Key Areas</h2>
-            <div class="areas-grid">
-                <div class="area-item">
-                    <div class="area-icon">💗</div>
-                    <h3>Health</h3>
-                    <p>Comprehensive health management tools and resources.</p>
-                </div>
-                <div class="area-item">
-                    <div class="area-icon">🌱</div>
-                    <h3>Personal Development</h3>
-                    <p>Courses and tools to help you grow and achieve your goals.</p>
-                </div>
-                <div class="area-item">
-                    <div class="area-icon">👥</div>
-                    <h3>Community</h3>
-                    <p>Connect with like-minded women and build lasting relationships.</p>
-                </div>
-                <div class="area-item">
-                    <div class="area-icon">🏋️‍♀️</div>
-                    <h3>Fitness</h3>
-                    <p>Personalized fitness plans and tracking for your wellness journey.</p>
-                </div>
-                <div class="area-item">
-                    <div class="area-icon">🛍️</div>
-                    <h3>Products</h3>
-                    <p>Curated selection of health and wellness products just for you.</p>
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Our Focus Areas</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        <h3>Health</h3>
+                        <p>Comprehensive health management tools and resources.</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                        <h3>Personal Development</h3>
+                        <p>Courses and resources for continuous growth.</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3>Fitness</h3>
+                        <p>Customized fitness plans and tracking.</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <h3>Community</h3>
+                        <p>Connect with like-minded women for support and inspiration.</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        <h3>Products</h3>
+                        <p>Curated products for women's health and wellness.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="coming-soon" id="contact">
-        <div class="container">
-            <h2>Coming Soon</h2>
-            <p>We're working hard to bring you the best experience. Sign up to stay updated!</p>
-            <form class="email-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Stay Updated</button>
-            </form>
-        </div>
-    </section>
+        <section id="about" class="about">
+            <div class="container">
+                
+                <h2>About Nyaari</h2>
+                <p>Nyaari is dedicated to empowering Indian women by providing a comprehensive platform that addresses their unique needs. We believe in holistic well-being and personal growth, supported by a strong community.</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Users Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <p>"Nyaari has transformed my approach to health and personal growth. I feel more empowered than ever!"</p>
+                        <p>- Priya S.</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"The community support on Nyaari is incredible. I've made lifelong friends who inspire me every day."</p>
+                        <p>- Anjali R.</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"From fitness tracking to personal development courses, Nyaari has everything I need in one place."</p>
+                        <p>- Meera K.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2>How Nyaari Works</h2>
+                <ol>
+                    <li>Sign up for a free account</li>
+                    <li>Complete your profile and set your goals</li>
+                    <li>Explore our features and resources</li>
+                    <li>Connect with the community</li>
+                    <li>Track your progress and celebrate your growth</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <p>Our diverse team of experts is passionate about women's health, technology, and community building. We're dedicated to creating the best possible experience for our users.</p>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Is Nyaari only for Indian women?</h3>
+                        <p>While Nyaari is designed with Indian women in mind, we welcome women from all backgrounds who can benefit from our platform.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is my data secure?</h3>
+                        <p>Yes, we take data privacy very seriously and use state-of-the-art encryption to protect your information.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="subscribe">
+            <div class="container">
+                <h2>Stay Updated with Nyaari</h2>
+                <p>Subscribe to our newsletter for the latest updates, tips, and exclusive offers.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
